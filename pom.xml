@@ -22,6 +22,27 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-ftp-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-quartz2-starter -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-quartz2-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-aws-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,7 +54,27 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-http-starter</artifactId>
             <version>${camel.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-kafka-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-mail</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-kafka</artifactId>
+            <version>${camel.version}</version>
+            <!-- use the same version as your Camel core version -->
         </dependency>
 
         <dependency>
@@ -226,8 +267,8 @@
                         </executions>
                     </plugin>
                     <!--<plugin>-->
-                        <!--<groupId>pl.project13.maven</groupId>-->
-                        <!--<artifactId>git-commit-id-plugin</artifactId>-->
+                    <!--<groupId>pl.project13.maven</groupId>-->
+                    <!--<artifactId>git-commit-id-plugin</artifactId>-->
                     <!--</plugin>-->
                 </plugins>
             </build>
