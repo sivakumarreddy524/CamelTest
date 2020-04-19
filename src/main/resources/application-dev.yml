@@ -1,3 +1,4 @@
+
 server:
   port: 8084
 
@@ -14,9 +15,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/sample4?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: root
-    password: Bits1234
+    url: jdbc:mysql://erpdirectinstance-epos-cluster.cluster-cwqcnccugfdx.us-east-1.rds.amazonaws.com/sample4?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: db_user
+    password: Z@ravya123
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -34,17 +35,14 @@ spring:
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
     hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
       ddl-auto: update
   main:
-    allow-bean-definition-overriding: true
+      allow-bean-definition-overriding: true
+
 
 application:
   apiPath: '/camel'
 camel:
   springboot:
     name: ServicesRest
-
-
-logging:
-  file:
-    name: C:/elk/spring-boot-elk.log
